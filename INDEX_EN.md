@@ -16,7 +16,7 @@ assetDepth: 1
 
 ## What is Rekisi Map Note?
 
-A notebook app for adults who want to relearn Japanese history as general knowledge.
+A notebook app for learning Japanese history by organizing events by era and place. Use it to relearn the basics or to dig deeper.
 
 - Move through the eras with the **era slider**
 - Write the events you looked up onto the **map of Japan**
