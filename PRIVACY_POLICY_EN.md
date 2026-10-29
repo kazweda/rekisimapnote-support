@@ -1,7 +1,7 @@
 ---
 title: Privacy Policy - Rekisi Map Note
 description: Privacy Policy for the Rekisi Map Note app. This document describes how personal data is collected, used, and protected.
-version: 0.1
+version: 0.2
 lastUpdated: 2026-10-29
 lang: en
 updatedLabel: Last updated
@@ -10,7 +10,7 @@ assetDepth: 2
 
 # Privacy Policy
 
-> This is a draft written before the app's release. It will be updated once storage, sync, advertising, and in-app purchases are decided.
+> This is a draft written before the app's release. It will be updated once advertising and in-app purchases are decided.
 
 ## Overview
 
@@ -29,7 +29,11 @@ assetDepth: 2
 | Event title, date, memo, source, tags | User input | Managing your notes | Local storage on the device |
 | Event place (latitude and longitude on the map) | User input | Showing the event on the map and its historical place name | Local storage on the device |
 | Era definitions (names and years) | Initial data (editable by the user) | Showing the era slider | Local storage on the device |
-| Metadata<br/>(created and updated date/time) | Automatic | Managing your notes | Local storage on the device |
+| Sample events | Initial data (editable and deletable by the user) | Showing the events that mark the start of each era | Local storage on the device |
+| Identifier (a random string) | Automatic | Telling events apart and importing backups | Local storage on the device |
+| Metadata<br/>(created, updated, and moved-to-trash date/time) | Automatic | Managing your notes, the trash, and importing backups | Local storage on the device |
+
+The identifier is created for each event. It does not identify you or your device.
 
 ### 1.2 Data We Do Not Collect
 
@@ -50,12 +54,17 @@ The app **never collects** the following:
 
 **Everything you write is stored on your device.**
 
+- **Technology**: SQLite database (drift)
 - **Location**: Inside the iOS/Android app sandbox
 - **Owner**: You (deleted automatically when the app is uninstalled)
 
+The app does not create backups automatically. To prepare for a device change or failure, please export a backup (Section 4.3).
+
 ### 2.2 Cloud Sync
 
-As of this draft, the app does not sync with the cloud. If sync is introduced, this policy will be updated and the change announced first.
+The first released version does not sync with the cloud.
+
+Sync to the app-specific storage of iCloud (iOS) and Google Drive (Android) is planned for the future. Data would go to your own account, never to a server managed by the developer. If sync is added, this policy will be updated and the change announced first.
 
 ### 2.3 Network Access for Displaying the Map
 
@@ -83,18 +92,34 @@ As of this draft, the app has no advertising and no in-app purchases. If they ar
 
 ### 4.1 Right of Access
 
-You can view everything you have written in the app at any time.
+You can access your data in the following ways:
+
+1. **In the app**: View everything you have written at any time
+2. **Backup file**: Export all your data in JSON format (Section 4.3)
 
 ### 4.2 Right to Erasure
 
 | Method | Scope | Timing |
 |-----|------|---------|
-| Deleting in the app | Selected events (including sample events) | Immediately |
+| Deleting in the app | Moves selected events (including sample events) to the trash (the content stays on the device) | Immediately |
+| Permanently deleting from the trash | Deletes the content of selected events, or of all events in the trash | Immediately |
+| Replacing by restoring a backup | Replaces the data on the device with the backup; events not in the backup are moved to the trash | When restoring |
 | Uninstalling the app | All local data | When the app is deleted |
+
+**About deleted events**:
+- Deleted events are moved to the trash with their content, and can be restored from the trash
+- Events permanently deleted from the trash have their content (title, date, place, memo, source, tags) removed from the device and cannot be restored
 
 ### 4.3 Right to Data Portability
 
-A feature to export your notes to a file is planned. The format and steps will be added when the feature is released.
+You can export all your data to a file at any time. The exported file is in JSON format and can be processed with other tools.
+
+When restoring from a backup, you can choose one of the following:
+
+- **Replace**: Replaces the current data with the backup. Events not in the backup are moved to the trash
+- **Merge**: Imports the backup while keeping the current data. If the same event exists in both, the one updated more recently is kept
+
+The steps will be added when the feature is released.
 
 ---
 
@@ -106,6 +131,8 @@ The app does not implement its own encryption layer. Data protection relies on t
 
 - **Local data**: OS sandbox, device encryption, and screen lock (iOS/Android)
 - **When downloading map images**: SSL/TLS
+
+Exported backup files are not encrypted. You choose where to save them (files on the device, cloud storage, etc.), and their protection depends on that location.
 
 ### 5.2 Reporting Security Issues
 
@@ -159,6 +186,7 @@ support (at) netplan.co.jp
 
 | Version | Date | Changes |
 |---------|-----|---------|
+| 0.2 | 2026-10-29 | Section 1.1: Added sample events, the identifier, and the moved-to-trash date/time. Section 2.1: Added the storage technology (SQLite / drift) and that the app does not create backups automatically. Section 2.2: Stated that the first release has no sync, with iCloud / Google Drive planned. Section 4: Added the trash, permanent deletion, JSON export, and replace/merge when restoring. Section 5.1: Stated that backup files are not encrypted |
 | 0.1 | 2026-10-29 | Created a pre-release draft |
 
 ---
