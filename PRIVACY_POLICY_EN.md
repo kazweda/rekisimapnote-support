@@ -1,7 +1,7 @@
 ---
 title: Privacy Policy - Rekisi Map Note
 description: Privacy Policy for the Rekisi Map Note app. This document describes how personal data is collected, used, and protected.
-version: 0.2
+version: 0.3
 lastUpdated: 2026-10-29
 lang: en
 updatedLabel: Last updated
@@ -10,7 +10,7 @@ assetDepth: 2
 
 # Privacy Policy
 
-> This is a draft written before the app's release. It will be updated once advertising and in-app purchases are decided.
+> This is a draft written before the app's release. Details of in-app purchases (a one-time purchase for cloud sync) will be added when they are introduced.
 
 ## Overview
 
@@ -84,7 +84,12 @@ To display the map, the app downloads map images from the provider's server (GSI
 
 ### 3.2 Advertising and In-App Purchases
 
-As of this draft, the app has no advertising and no in-app purchases. If they are introduced, the information they handle and the providers' privacy policies will be added to this policy before the change is announced.
+**The app does not include advertising.** No mechanism that tracks you, including ad SDKs, is built into the app.
+
+A one-time in-app purchase for cloud sync is planned for the future. The first released version has no in-app purchases.
+
+- Payments are processed by Apple (App Store) / Google (Google Play). The developer does not receive your name or payment information
+- When in-app purchases are introduced, the information they handle will be added to this policy before the change is announced
 
 ---
 
@@ -186,6 +191,7 @@ support (at) netplan.co.jp
 
 | Version | Date | Changes |
 |---------|-----|---------|
+| 0.3 | 2026-10-29 | Changed the opening note to the planned in-app purchase. Section 3.2: Stated that the app does not include advertising, and added the planned in-app purchase (a one-time purchase for cloud sync) |
 | 0.2 | 2026-10-29 | Section 1.1: Added sample events, the identifier, and the moved-to-trash date/time. Section 2.1: Added the storage technology (SQLite / drift) and that the app does not create backups automatically. Section 2.2: Stated that the first release has no sync, with iCloud / Google Drive planned. Section 4: Added the trash, permanent deletion, JSON export, and replace/merge when restoring. Section 5.1: Stated that backup files are not encrypted |
 | 0.1 | 2026-10-29 | Created a pre-release draft |
 
