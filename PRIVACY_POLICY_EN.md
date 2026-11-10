@@ -1,7 +1,7 @@
 ---
 title: Privacy Policy - Rekisi Map Note
 description: Privacy Policy for the Rekisi Map Note app. This document describes how personal data is collected, used, and protected.
-version: 0.4
+version: 0.5
 lastUpdated: 2026-11-10
 lang: en
 updatedLabel: Last updated
@@ -26,9 +26,8 @@ assetDepth: 2
 
 | Data Type | Collection Method | Purpose | Storage |
 |---------|--------|------|-------|
-| Event title, date, memo, source, tags | User input | Managing your notes | Local storage on the device |
+| Event title, date, memo, source | User input | Managing your notes | Local storage on the device |
 | Event place (latitude and longitude on the map) | User input | Showing the event on the map and its historical place name | Local storage on the device |
-| Era definitions (names and years) | Initial data (editable by the user) | Showing the era slider | Local storage on the device |
 | Sample events | Initial data (editable and deletable by the user) | Showing the events that mark the start of each era | Local storage on the device |
 | Identifier (a random string) | Automatic | Telling events apart and importing backups | Local storage on the device |
 | Metadata<br/>(created, updated, and moved-to-trash date/time) | Automatic | Managing your notes, the trash, and importing backups | Local storage on the device |
@@ -103,7 +102,7 @@ A one-time in-app purchase for cloud sync is planned for the future. The first r
 You can access your data in the following ways:
 
 1. **In the app**: View everything you have written at any time
-2. **Backup file**: Export all your data in JSON format (Section 4.3)
+2. **Backup file**: Export all your events (including those in the trash) in JSON format (Section 4.3)
 
 ### 4.2 Right to Erasure
 
@@ -116,11 +115,11 @@ You can access your data in the following ways:
 
 **About deleted events**:
 - Deleted events are moved to the trash with their content, and can be restored from the trash
-- Events permanently deleted from the trash have their content (title, date, place, memo, source, tags) removed from the device and cannot be restored
+- Events permanently deleted from the trash have their content (title, date, place, memo, source) removed from the device and cannot be restored
 
 ### 4.3 Right to Data Portability
 
-You can export all your events (including those in the trash) to a file at any time. The exported file is in JSON format and can be processed with other tools. Era definitions and tags are not included in the export at this time.
+You can export all your events (including those in the trash) to a file at any time. The exported file is in JSON format and can be processed with other tools.
 
 **Exporting**
 
@@ -206,6 +205,7 @@ support (at) netplan.co.jp
 
 | Version | Date | Changes |
 |---------|-----|---------|
+| 0.5 | 2026-11-10 | Sections 1.1 and 4.2: Removed tags and user-editable era definitions, which the app does not have yet. Section 4.1: Changed what can be exported to "all your events (including those in the trash)" to match Section 4.3. Section 4.3: Removed the note about era definitions and tags |
 | 0.4 | 2026-11-10 | Section 1.1: Added the date/time of the last backup, and stated that it is not included in the backup file and is never sent. Sections 4.2 and 4.3: Renamed "Replace" and "Merge" to "Import and replace" and "Import and merge" to match the app. Section 4.3: Added the steps for exporting and importing, what is exported, and backup reminders |
 | 0.3 | 2026-10-29 | Changed the opening note to the planned in-app purchase. Section 3.2: Stated that the app does not include advertising, and added the planned in-app purchase (a one-time purchase for cloud sync) |
 | 0.2 | 2026-10-29 | Section 1.1: Added sample events, the identifier, and the moved-to-trash date/time. Section 2.1: Added the storage technology (SQLite / drift) and that the app does not create backups automatically. Section 2.2: Stated that the first release has no sync, with iCloud / Google Drive planned. Section 4: Added the trash, permanent deletion, JSON export, and replace/merge when restoring. Section 5.1: Stated that backup files are not encrypted |
