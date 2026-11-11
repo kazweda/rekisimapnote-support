@@ -1,8 +1,8 @@
 ---
 title: Privacy Policy - Rekisi Map Note
 description: Privacy Policy for the Rekisi Map Note app. This document describes how personal data is collected, used, and protected.
-version: 0.5
-lastUpdated: 2026-11-10
+version: 0.6
+lastUpdated: 2026-11-11
 lang: en
 updatedLabel: Last updated
 assetDepth: 2
@@ -75,6 +75,10 @@ To display the map, the app downloads map images from the provider's server (GSI
 - Only map images are downloaded. Your notes are never sent
 - When downloading, the provider's server receives information such as your IP address and the area of the map being displayed
 - Communication uses SSL/TLS
+
+### 2.4 Opening Links in Sources
+
+When you tap a URL written in an event's source, the page opens in your device's browser. The browser communicates with the page; the app does not send your notes. How the opened site handles information is governed by that site's privacy policy.
 
 ---
 
@@ -205,6 +209,7 @@ support (at) netplan.co.jp
 
 | Version | Date | Changes |
 |---------|-----|---------|
+| 0.6 | 2026-11-11 | Section 2.4: Added that tapping a URL in a source opens it in the device's browser, and that the browser handles the communication and your notes are not sent |
 | 0.5 | 2026-11-10 | Sections 1.1 and 4.2: Removed tags and user-editable era definitions, which the app does not have yet. Section 4.1: Changed what can be exported to "all your events (including those in the trash)" to match Section 4.3. Section 4.3: Removed the note about era definitions and tags |
 | 0.4 | 2026-11-10 | Section 1.1: Added the date/time of the last backup, and stated that it is not included in the backup file and is never sent. Sections 4.2 and 4.3: Renamed "Replace" and "Merge" to "Import and replace" and "Import and merge" to match the app. Section 4.3: Added the steps for exporting and importing, what is exported, and backup reminders |
 | 0.3 | 2026-10-29 | Changed the opening note to the planned in-app purchase. Section 3.2: Stated that the app does not include advertising, and added the planned in-app purchase (a one-time purchase for cloud sync) |
