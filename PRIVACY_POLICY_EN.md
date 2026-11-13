@@ -1,8 +1,8 @@
 ---
 title: Privacy Policy - Rekisi Map Note
 description: Privacy Policy for the Rekisi Map Note app. This document describes how personal data is collected, used, and protected.
-version: 0.6
-lastUpdated: 2026-11-11
+version: 0.7
+lastUpdated: 2026-11-13
 lang: en
 updatedLabel: Last updated
 assetDepth: 2
@@ -26,7 +26,7 @@ assetDepth: 2
 
 | Data Type | Collection Method | Purpose | Storage |
 |---------|--------|------|-------|
-| Event title, date, memo, source | User input | Managing your notes | Local storage on the device |
+| Event title, date, memo, source, tags | User input | Managing your notes | Local storage on the device |
 | Event place (latitude and longitude on the map) | User input | Showing the event on the map and its historical place name | Local storage on the device |
 | Sample events | Initial data (editable and deletable by the user) | Showing the events that mark the start of each era | Local storage on the device |
 | Identifier (a random string) | Automatic | Telling events apart and importing backups | Local storage on the device |
@@ -119,11 +119,11 @@ You can access your data in the following ways:
 
 **About deleted events**:
 - Deleted events are moved to the trash with their content, and can be restored from the trash
-- Events permanently deleted from the trash have their content (title, date, place, memo, source) removed from the device and cannot be restored
+- Events permanently deleted from the trash have their content (title, date, place, memo, source, tags) removed from the device and cannot be restored
 
 ### 4.3 Right to Data Portability
 
-You can export all your events (including those in the trash) to a file at any time. The exported file is in JSON format and can be processed with other tools.
+You can export all your events (including those in the trash) to a file at any time. The exported file is in JSON format and can be processed with other tools. The tags on each event are included.
 
 **Exporting**
 
@@ -137,7 +137,7 @@ The date/time of the last backup is recorded only when saving or sending is comp
 
 On the same Backup screen, tap one of the following and choose an exported file:
 
-- **Import and merge** (合わせて読み込む): Imports the backup while keeping the current data. If the same event exists in both, the one updated more recently is kept
+- **Import and merge** (合わせて読み込む): Imports the backup while keeping the current data. If the same event exists in both, the one updated more recently is kept (its tags are kept along with it)
 - **Import and replace** (置き換えて読み込む): Replaces the current data with the backup. Events not in the backup are not deleted but moved to the trash. A confirmation screen appears before importing
 
 **Backup reminders**
@@ -209,6 +209,7 @@ support (at) netplan.co.jp
 
 | Version | Date | Changes |
 |---------|-----|---------|
+| 0.7 | 2026-11-13 | Sections 1.1 and 4.2: Added tags, now that the app can tag events. Section 4.3: Stated that exported files include tags, and how tags are handled when importing and merging |
 | 0.6 | 2026-11-11 | Section 2.4: Added that tapping a URL in a source opens it in the device's browser, and that the browser handles the communication and your notes are not sent |
 | 0.5 | 2026-11-10 | Sections 1.1 and 4.2: Removed tags and user-editable era definitions, which the app does not have yet. Section 4.1: Changed what can be exported to "all your events (including those in the trash)" to match Section 4.3. Section 4.3: Removed the note about era definitions and tags |
 | 0.4 | 2026-11-10 | Section 1.1: Added the date/time of the last backup, and stated that it is not included in the backup file and is never sent. Sections 4.2 and 4.3: Renamed "Replace" and "Merge" to "Import and replace" and "Import and merge" to match the app. Section 4.3: Added the steps for exporting and importing, what is exported, and backup reminders |
